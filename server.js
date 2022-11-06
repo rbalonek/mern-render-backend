@@ -14,9 +14,9 @@ app.use(logger("dev"));
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
  
-// app.get("/", (req, res) => {
-//   res.send("I am ROOT");
-// });
+app.get("/", (req, res) => {
+  res.send("I am ROOT");
+});
 
 // Endpoints
 app.use("/api", productsRoutes);
